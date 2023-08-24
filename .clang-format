@@ -1,0 +1,17 @@
+# filename: .clang-format
+# author: Backtraxe
+# date: 2023-08-24
+
+# 模板
+BasedOnStyle: Google
+
+# 缩进
+IndentWidth: 2
+TabWidth: 2
+
+# 语言
+Language: Cpp
+
+# 指针“*”的位置
+DerivePointerAlignment: false
+PointerAlignment: Left
