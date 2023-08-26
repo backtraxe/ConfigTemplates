@@ -1,0 +1,64 @@
+// ******************************* linux/mac ************************************
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C++ Compile",
+            "command": "/usr/bin/g++", // g++ 路径
+            "args": [
+                "-Wall", // 打印警告信息
+                "-std=c++11", // C++ 11 标准
+                "-lpthread", // 开启多线程 pthread
+                "-g", // 生成 gdb 调试信息
+                "${file}", // 当前文件
+                // "${workspaceFolder}/*.cpp", // 目录下所有 .cpp 文件
+                "-o", // 指定输出文件
+                "${fileDirname}/${fileBasenameNoExtension}" // 输出文件名
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "C++ Compile"
+        }
+    ]
+}
+// ************************************ windows **********************************
+// {
+//     "version": "2.0.0",
+//     "tasks": [
+//         {
+//             "type": "cppbuild",
+//             "label": "C++ Compile",
+//             "command": "C:\\msys64\\mingw64\\bin\\g++.exe", // g++ 路径
+//             "args": [
+//                 "-Wall", // 打印警告信息
+//                 "-std=c++11", // C++ 11 标准
+//                 "-lpthread", // 开启多线程 pthread
+//                 "-g", // 生成 gdb 调试信息
+//                 "${file}", // 当前文件
+//                 // "${workspaceFolder}/*.cpp", // 目录下所有 .cpp 文件
+//                 "-o", // 指定输出文件
+//                 "${fileDirname}\\${fileBasenameNoExtension}.exe" // 输出文件名
+//             ],
+//             "options": {
+//                 "cwd": "${fileDirname}"
+//             },
+//             "problemMatcher": [
+//                 "$gcc"
+//             ],
+//             "group": {
+//                 "kind": "build",
+//                 "isDefault": true
+//             },
+//             "detail": "C++ Compile"
+//         }
+//     ]
+// }

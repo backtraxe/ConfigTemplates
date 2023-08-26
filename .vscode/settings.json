@@ -1,0 +1,12 @@
+{
+    //
+    // editor
+    //
+    "editor.fontSize": 14, // 字体大小
+    "editor.formatOnSave": false, // 保存时格式化
+    "editor.minimap.enabled": false, // 关闭右侧小地图
+    //
+    // files
+    //
+    "files.autoSave": "onFocusChange", // 失去焦点后自动保存
+}
